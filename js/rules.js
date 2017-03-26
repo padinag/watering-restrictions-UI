@@ -1,3 +1,11 @@
+    function checkGeoarea(){
+        var geoareaChecked = document.getElementById("geoarea").value;
+        if (geoareaChecked.checked){
+          console.log("geoarea selected");
+         }
+    }
+
+
 function readForm(){
     console.log("created");
     var companyDetails={};
@@ -8,14 +16,8 @@ function readForm(){
     var country = document.getElementById("companyCountry").value;
     var state = document.getElementById("companyState").value;
     console.log(name, phone, address, city, country, state);
-    
-    function checkGeoarea(){
-        var geoareaChecked = document.getElementById("geoarea");
-        if (geoareaChecked.checked){
-            var geoareaCoord = [];
-        }
-    }
-    
+    checkGeoarea();
+
     
     
     var partOfStage=document.getElementById("stagePart");

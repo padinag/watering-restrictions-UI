@@ -18,10 +18,24 @@ function readForm(){
          }
     
 //water restrictions valid from
-    var date = document.getElementById("dp6").value;
-    console.log(date);
+//    var date = document.getElementById("dp6").value;
+//      console.log(date);
     
+//property type  
+    var typeResidential = document.getElementById("IrrigationTypeResidential");
+        if (typeResidential.checked){
+            console.log("Residential");
+        }
     
+    var typeCommercial = document.getElementById("IrrigationTypeCommercial");
+        if (typeCommercial.checked){
+            console.log("Commercial");
+        }
+    
+    var typePublic = document.getElementById("IrrigationTypePublic");
+    if (typePublic.checked){
+            console.log("Public");
+        }
     
     var partOfStage=document.getElementById("stagePart");
     var stageName = partOfStage.options[partOfStage.selectedIndex].value;

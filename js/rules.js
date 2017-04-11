@@ -20,6 +20,11 @@ function readForm(){
 //water restrictions valid from
 //    var date = document.getElementById("dp6").value;
 //      console.log(date);
+
+//stage    
+    var partOfStage=document.getElementById("stagePart");
+    var stageName = partOfStage.options[partOfStage.selectedIndex].value;
+    console.log(stageName)
     
 //property type  
     var typeResidential = document.getElementById("IrrigationTypeResidential");
@@ -37,9 +42,41 @@ function readForm(){
             console.log("Public");
         }
     
-    var partOfStage=document.getElementById("stagePart");
-    var stageName = partOfStage.options[partOfStage.selectedIndex].value;
-    console.log(stageName)
+//Day
+    var checkSunday = document.getElementById("weekday1");
+    if (checkSunday.checked){
+        console.log("Sunday");
+    }
+    
+    var checkMonday = document.getElementById("weekday2");
+    if (checkMonday.checked){
+        console.log("Monday");
+    }
+    
+    var checkTuesday = document.getElementById("weekday3");
+    if (checkTuesday.checked){
+        console.log("Tuesday");
+    }
+    
+    var checkWednesday = document.getElementById("weekday4");
+    if (checkWednesday.checked){
+        console.log("Wednesday");
+    }
+    
+    var checkThursday = document.getElementById("weekday5");
+    if (checkThursday.checked){
+        console.log("Thursday");
+    }
+    
+    var checkFriday = document.getElementById("weekday6");
+    if (checkFriday.checked){
+        console.log("Friday");
+    }
+    
+var checkSaturday = document.getElementById("weekday7");
+    if (checkSaturday.checked){
+        console.log("Saturday");
+    }
 }
  
 

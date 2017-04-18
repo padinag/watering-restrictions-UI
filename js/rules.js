@@ -73,9 +73,28 @@ function readForm(){
         console.log("Friday");
     }
     
-var checkSaturday = document.getElementById("weekday7");
+    var checkSaturday = document.getElementById("weekday7");
     if (checkSaturday.checked){
         console.log("Saturday");
+    }
+//hause nr
+    var oddNumber = document.getElementById("odd");
+    if (oddNumber.checked){
+        console.log("odd house number");
+    }
+    var evenNumber = document.getElementById("even");
+    if (evenNumber.checked){
+        console.log("even house number");
+    }
+    
+//irrigation type
+    var dripIrrigation=document.getElementById("drip");
+    if(dripIrrigation.checked){
+        console.log("drip irrigation type");
+    }
+    var sprinklerIrrigation=document.getElementById("sprinkler");
+    if(sprinklerIrrigation.checked){
+        console.log("sprinkler irrigation type");
     }
 }
  

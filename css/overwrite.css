@@ -1284,3 +1284,7 @@ h1.entry-title {display:none;}
   -webkit-animation-timing-function: linear;
 }
 /*end shake*/
+#map {
+    width: 20%;
+    height: 20%;
+   }

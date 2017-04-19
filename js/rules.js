@@ -2,20 +2,26 @@ function readForm(){
     console.log("created");
     
 //company details
-    var companyDetails={};
-    var name = document.getElementById("companyName").value;
-    var phone = document.getElementById("companyPhone").value;
-    var address = document.getElementById("companyAddress").value;
-    var city = document.getElementById("companyCity").value;
-    var country = document.getElementById("companyCountry").value;
-    var state = document.getElementById("companyState").value;
-    console.log(name, phone, address, city, country, state);
-    
+    var company={};
+    var nameV = document.getElementById("companyName").value;
+    var phoneV = document.getElementById("companyPhone").value;
+    var addressV = document.getElementById("companyAddress").value;
+    var cityV = document.getElementById("companyCity").value;
+    var countryV = document.getElementById("companyCountry").value;
+    var stateV = document.getElementById("companyState").value;
+   // console.log(name, phone, address, city, country, state);
+
 //geoarea  
     var geoareaChecked = document.getElementById("geoarea");
         if (geoareaChecked.checked){
-          console.log("geoarea selected");
-         }
+            
+            var coordinates = [];
+            console.log("geoarea selected");
+}
+
+var company={name: nameV, phone: phoneV, address: addressV, city: cityV, country: countryV, state: stateV};
+    console.log(company);
+    
     
 //water restrictions valid from
 //    var date = document.getElementById("dp6").value;

@@ -3,6 +3,20 @@ function readForm(){
     
 //company details
     var company={};
+    var stagesPredefined = [
+        "Conservation",
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "Stage 4"
+    ];
+    
+    var typesPredefined = [
+        "residential",
+        "commercial",
+        "school"
+    ];
+    
     var nameV = document.getElementById("companyName").value;
     var phoneV = document.getElementById("companyPhone").value;
     var addressV = document.getElementById("companyAddress").value;
@@ -20,8 +34,9 @@ function readForm(){
 }
 
 var company={name: nameV, phone: phoneV, address: addressV, city: cityV, country: countryV, state: stateV};
-    console.log(company);
-    
+    //console.log(company);
+var companyJ= JSON.stringify(company);
+    console.log(companyJ);
     
 //water restrictions valid from
 //    var date = document.getElementById("dp6").value;
@@ -29,8 +44,9 @@ var company={name: nameV, phone: phoneV, address: addressV, city: cityV, country
 
 //stage    
     var partOfStage=document.getElementById("stagePart");
-    var stageName = partOfStage.options[partOfStage.selectedIndex].value;
-    console.log(stageName)
+    var stageIndex = partOfStage.options.selectedIndex;
+    var stageName = stageIndex.toString();
+    console.log(stageName);
     
 //property type  
     var typeResidential = document.getElementById("IrrigationTypeResidential");
@@ -47,6 +63,11 @@ var company={name: nameV, phone: phoneV, address: addressV, city: cityV, country
     if (typePublic.checked){
             console.log("Public");
         }
+    var propertyType = [];
+    var propertyList = document.getElementById("property");
+    for (i = 0; i < propertyList.length; i++){
+        propertyTypeSelected =  1;
+    }
     
 //Day
     var checkSunday = document.getElementById("weekday1");
@@ -102,6 +123,20 @@ var company={name: nameV, phone: phoneV, address: addressV, city: cityV, country
     if(sprinklerIrrigation.checked){
         console.log("sprinkler irrigation type");
     }
+    var rules = [];
+    for (var i = 0; i < stagesPredefined.length; i++) {
+        var _types = [];
+        for (var j = 0; j < typesPredefined.length; j++) {
+            _types.push([]);
+        }
+        rules.push(_types);
+    }
+    console.log(rules);    
+    
+    
+
+    
+//var rules = {stages: [stageName], propretyTypes: [], day: [], houseNumber: [],  irrigationSystems: [], }    
 }
  
 

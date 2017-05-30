@@ -17,6 +17,11 @@ function readForm(){
         "school"
     ];
     
+    var irrigationSystemsPredefined = [
+        "sprinkler", 
+        "drip"
+    ];
+    
     var nameV = document.getElementById("companyName").value;
     var phoneV = document.getElementById("companyPhone").value;
     var addressV = document.getElementById("companyAddress").value;
@@ -127,6 +132,10 @@ var companyJ= JSON.stringify(company);
     for (var i = 0; i < stagesPredefined.length; i++) {
         var _types = [];
         for (var j = 0; j < typesPredefined.length; j++) {
+//           var irrigationType = [];
+//          for (var ir = 0; ir < irrigationSystemsPredefined.length; ir++){
+//              irrigationType.push([]);
+//            }
             _types.push([]);
         }
         rules.push(_types);

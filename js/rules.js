@@ -25,11 +25,18 @@ function readForm() {
         "Saturday"
     ];
     
+<<<<<<< HEAD
     
     var rules = [];
 
 //company details
     var company={};
+=======
+    var irrigationSystemsPredefined = [
+        "sprinkler", 
+        "drip"
+    ];
+>>>>>>> origin/master
     
     var nameV = document.getElementById("companyName").value;
     var phoneV = document.getElementById("companyPhone").value;
@@ -59,7 +66,7 @@ var companyJ= JSON.stringify(company);
 //stage    
     var partOfStage=document.getElementById("stagePart");
     var stageIndex = partOfStage.options.selectedIndex;
-    console.log("adding new rule from index" + " " + stageIndex);
+    console.log("adding new rule with stage index" + " " + stageIndex);
     
 //property type  
     var propertyType = [];
@@ -120,7 +127,7 @@ var companyJ= JSON.stringify(company);
     if (checkSaturday.checked){
         console.log("Saturday");
     }
-//hause nr
+//house nr
     var oddNumber = document.getElementById("odd");
     if (oddNumber.checked){
         console.log("odd house number");

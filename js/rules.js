@@ -1,9 +1,7 @@
-function readForm(){
+function readForm() {
     console.log("created");
     
-//company details
-    var company={};
-    var stagesPredefined = [
+  var stagesPredefined = [
         "Conservation",
         "Stage 1",
         "Stage 2",
@@ -14,8 +12,24 @@ function readForm(){
     var typesPredefined = [
         "residential",
         "commercial",
-        "school"
+        "public"
+    ]; 
+    
+    var daysPredefined =[
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
     ];
+    
+    
+    var rules = [];
+
+//company details
+    var company={};
     
     var nameV = document.getElementById("companyName").value;
     var phoneV = document.getElementById("companyPhone").value;
@@ -45,29 +59,31 @@ var companyJ= JSON.stringify(company);
 //stage    
     var partOfStage=document.getElementById("stagePart");
     var stageIndex = partOfStage.options.selectedIndex;
-    var stageName = stageIndex.toString();
-    console.log(stageName);
+    console.log("adding new rule from index" + " " + stageIndex);
     
 //property type  
+    var propertyType = [];
     var typeResidential = document.getElementById("IrrigationTypeResidential");
-        if (typeResidential.checked){
-            console.log("Residential");
-        }
+    if (typeResidential.checked) {
+        var v = +typeResidential.value;
+        propertyType.push(v);
+        console.log("%d : %s Array: %o", v, typesPredefined[v], propertyType);                    
+    }
     
     var typeCommercial = document.getElementById("IrrigationTypeCommercial");
-        if (typeCommercial.checked){
-            console.log("Commercial");
+    if (typeCommercial.checked){
+        var c = +typeCommercial.value;
+        propertyType.push(c);
+        console.log("%d : %s Array: %o", c, typesPredefined[c], propertyType);
         }
     
     var typePublic = document.getElementById("IrrigationTypePublic");
     if (typePublic.checked){
-            console.log("Public");
+        var p = +typePublic.value;
+        propertyType.push(p)
+        console.log("%d : %s Array: %o", p, typesPredefined[p], propertyType);
         }
-    var propertyType = [];
-    var propertyList = document.getElementById("property");
-    for (i = 0; i < propertyList.length; i++){
-        propertyTypeSelected =  1;
-    }
+
     
 //Day
     var checkSunday = document.getElementById("weekday1");
@@ -123,20 +139,18 @@ var companyJ= JSON.stringify(company);
     if(sprinklerIrrigation.checked){
         console.log("sprinkler irrigation type");
     }
-    var rules = [];
+    
+
+    
+    
+  
     for (var i = 0; i < stagesPredefined.length; i++) {
-        var _types = [];
+        var selectedTypes = [];
         for (var j = 0; j < typesPredefined.length; j++) {
-            _types.push([]);
+            selectedTypes.push([]);
         }
-        rules.push(_types);
+        rules.push(selectedTypes);
     }
     console.log(rules);    
     
-    
-
-    
-//var rules = {stages: [stageName], propretyTypes: [], day: [], houseNumber: [],  irrigationSystems: [], }    
 }
- 
-
